@@ -1,0 +1,300 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C6C4EDC314FF2FCD00551849 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6C4EDC214FF2FCD00551849 /* UIKit.framework */; };
+		C6C4EDC514FF2FCD00551849 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6C4EDC414FF2FCD00551849 /* Foundation.framework */; };
+		C6C4EDC714FF2FCD00551849 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6C4EDC614FF2FCD00551849 /* CoreGraphics.framework */; };
+		C6C4EDCD14FF2FCD00551849 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C6C4EDCB14FF2FCD00551849 /* InfoPlist.strings */; };
+		C6C4EDCF14FF2FCD00551849 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C4EDCE14FF2FCD00551849 /* main.m */; };
+		C6C4EDD314FF2FCD00551849 /* HypedSongsAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C4EDD214FF2FCD00551849 /* HypedSongsAppDelegate.m */; };
+		C6C4EDD614FF2FCD00551849 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6C4EDD414FF2FCD00551849 /* MainStoryboard.storyboard */; };
+		C6C4EDE114FF30F100551849 /* HypedSongsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C4EDE014FF30F100551849 /* HypedSongsTableViewController.m */; };
+		C6C4EDE414FF316100551849 /* SongDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C4EDE314FF316100551849 /* SongDetailViewController.m */; };
+		C6C4EDE714FF318200551849 /* ArtistPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C4EDE614FF318200551849 /* ArtistPictureViewController.m */; };
+		C6C4EDEA14FF323E00551849 /* Song.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C4EDE914FF323E00551849 /* Song.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C6C4EDBE14FF2FCD00551849 /* HypedSongs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HypedSongs.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6C4EDC214FF2FCD00551849 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		C6C4EDC414FF2FCD00551849 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C6C4EDC614FF2FCD00551849 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C6C4EDCA14FF2FCD00551849 /* HypedSongs-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HypedSongs-Info.plist"; sourceTree = "<group>"; };
+		C6C4EDCC14FF2FCD00551849 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C6C4EDCE14FF2FCD00551849 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C6C4EDD014FF2FCD00551849 /* HypedSongs-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HypedSongs-Prefix.pch"; sourceTree = "<group>"; };
+		C6C4EDD114FF2FCD00551849 /* HypedSongsAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HypedSongsAppDelegate.h; sourceTree = "<group>"; };
+		C6C4EDD214FF2FCD00551849 /* HypedSongsAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HypedSongsAppDelegate.m; sourceTree = "<group>"; };
+		C6C4EDD514FF2FCD00551849 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		C6C4EDDF14FF30F100551849 /* HypedSongsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HypedSongsTableViewController.h; sourceTree = "<group>"; };
+		C6C4EDE014FF30F100551849 /* HypedSongsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HypedSongsTableViewController.m; sourceTree = "<group>"; };
+		C6C4EDE214FF316100551849 /* SongDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongDetailViewController.h; sourceTree = "<group>"; };
+		C6C4EDE314FF316100551849 /* SongDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SongDetailViewController.m; sourceTree = "<group>"; };
+		C6C4EDE514FF318200551849 /* ArtistPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArtistPictureViewController.h; sourceTree = "<group>"; };
+		C6C4EDE614FF318200551849 /* ArtistPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArtistPictureViewController.m; sourceTree = "<group>"; };
+		C6C4EDE814FF323E00551849 /* Song.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Song.h; sourceTree = "<group>"; };
+		C6C4EDE914FF323E00551849 /* Song.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Song.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C6C4EDBB14FF2FCD00551849 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6C4EDC314FF2FCD00551849 /* UIKit.framework in Frameworks */,
+				C6C4EDC514FF2FCD00551849 /* Foundation.framework in Frameworks */,
+				C6C4EDC714FF2FCD00551849 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C6C4EDB314FF2FCD00551849 = {
+			isa = PBXGroup;
+			children = (
+				C6C4EDC814FF2FCD00551849 /* HypedSongs */,
+				C6C4EDC114FF2FCD00551849 /* Frameworks */,
+				C6C4EDBF14FF2FCD00551849 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C6C4EDBF14FF2FCD00551849 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C6C4EDBE14FF2FCD00551849 /* HypedSongs.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C6C4EDC114FF2FCD00551849 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C6C4EDC214FF2FCD00551849 /* UIKit.framework */,
+				C6C4EDC414FF2FCD00551849 /* Foundation.framework */,
+				C6C4EDC614FF2FCD00551849 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C6C4EDC814FF2FCD00551849 /* HypedSongs */ = {
+			isa = PBXGroup;
+			children = (
+				C6C4EDE814FF323E00551849 /* Song.h */,
+				C6C4EDE914FF323E00551849 /* Song.m */,
+				C6C4EDD114FF2FCD00551849 /* HypedSongsAppDelegate.h */,
+				C6C4EDD214FF2FCD00551849 /* HypedSongsAppDelegate.m */,
+				C6C4EDD414FF2FCD00551849 /* MainStoryboard.storyboard */,
+				C6C4EDC914FF2FCD00551849 /* Supporting Files */,
+				C6C4EDDF14FF30F100551849 /* HypedSongsTableViewController.h */,
+				C6C4EDE014FF30F100551849 /* HypedSongsTableViewController.m */,
+				C6C4EDE214FF316100551849 /* SongDetailViewController.h */,
+				C6C4EDE314FF316100551849 /* SongDetailViewController.m */,
+				C6C4EDE514FF318200551849 /* ArtistPictureViewController.h */,
+				C6C4EDE614FF318200551849 /* ArtistPictureViewController.m */,
+			);
+			path = HypedSongs;
+			sourceTree = "<group>";
+		};
+		C6C4EDC914FF2FCD00551849 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C6C4EDCA14FF2FCD00551849 /* HypedSongs-Info.plist */,
+				C6C4EDCB14FF2FCD00551849 /* InfoPlist.strings */,
+				C6C4EDCE14FF2FCD00551849 /* main.m */,
+				C6C4EDD014FF2FCD00551849 /* HypedSongs-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C6C4EDBD14FF2FCD00551849 /* HypedSongs */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C6C4EDDC14FF2FCD00551849 /* Build configuration list for PBXNativeTarget "HypedSongs" */;
+			buildPhases = (
+				C6C4EDBA14FF2FCD00551849 /* Sources */,
+				C6C4EDBB14FF2FCD00551849 /* Frameworks */,
+				C6C4EDBC14FF2FCD00551849 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HypedSongs;
+			productName = HypedSongs;
+			productReference = C6C4EDBE14FF2FCD00551849 /* HypedSongs.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C6C4EDB514FF2FCD00551849 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = C6C4EDB814FF2FCD00551849 /* Build configuration list for PBXProject "HypedSongs" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C6C4EDB314FF2FCD00551849;
+			productRefGroup = C6C4EDBF14FF2FCD00551849 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C6C4EDBD14FF2FCD00551849 /* HypedSongs */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C6C4EDBC14FF2FCD00551849 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6C4EDCD14FF2FCD00551849 /* InfoPlist.strings in Resources */,
+				C6C4EDD614FF2FCD00551849 /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C6C4EDBA14FF2FCD00551849 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6C4EDCF14FF2FCD00551849 /* main.m in Sources */,
+				C6C4EDD314FF2FCD00551849 /* HypedSongsAppDelegate.m in Sources */,
+				C6C4EDE114FF30F100551849 /* HypedSongsTableViewController.m in Sources */,
+				C6C4EDE414FF316100551849 /* SongDetailViewController.m in Sources */,
+				C6C4EDE714FF318200551849 /* ArtistPictureViewController.m in Sources */,
+				C6C4EDEA14FF323E00551849 /* Song.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C6C4EDCB14FF2FCD00551849 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C6C4EDCC14FF2FCD00551849 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C6C4EDD414FF2FCD00551849 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C6C4EDD514FF2FCD00551849 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C6C4EDDA14FF2FCD00551849 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C6C4EDDB14FF2FCD00551849 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C6C4EDDD14FF2FCD00551849 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HypedSongs/HypedSongs-Prefix.pch";
+				INFOPLIST_FILE = "HypedSongs/HypedSongs-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C6C4EDDE14FF2FCD00551849 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HypedSongs/HypedSongs-Prefix.pch";
+				INFOPLIST_FILE = "HypedSongs/HypedSongs-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C6C4EDB814FF2FCD00551849 /* Build configuration list for PBXProject "HypedSongs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C6C4EDDA14FF2FCD00551849 /* Debug */,
+				C6C4EDDB14FF2FCD00551849 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C6C4EDDC14FF2FCD00551849 /* Build configuration list for PBXNativeTarget "HypedSongs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C6C4EDDD14FF2FCD00551849 /* Debug */,
+				C6C4EDDE14FF2FCD00551849 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C6C4EDB514FF2FCD00551849 /* Project object */;
+}
