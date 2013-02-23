@@ -29,7 +29,7 @@
 {
     
     [super viewDidLoad];
-    labelTrackName.text = [selectedTrack ad];
+    labelTrackName.text = [selectedTrack name];
     labelAlbum.text = [selectedTrack album];
     labelArtsit.text= [selectedTrack artist];
     labelGenre.text = [selectedTrack genre];

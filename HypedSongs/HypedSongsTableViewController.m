@@ -111,7 +111,7 @@ NSMutableArray *tracks;
     }
     
     Track * track = [tracks objectAtIndex:indexPath.row];
-    cell.textLabel.text = [track ad];
+    cell.textLabel.text = [track name];
     
     return cell;
 }
