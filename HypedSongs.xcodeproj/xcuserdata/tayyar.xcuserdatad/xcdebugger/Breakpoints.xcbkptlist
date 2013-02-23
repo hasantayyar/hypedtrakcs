@@ -21,11 +21,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "HypedSongs/HypedSongsTableViewController.m"
-         timestampString = "383314885.157497"
+         timestampString = "383335178.259462"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "92"
-         endingLineNumber = "92"
+         startingLineNumber = "82"
+         endingLineNumber = "82"
          landmarkName = "@implementation HypedSongsTableViewController"
          landmarkType = "3">
       </FileBreakpoint>

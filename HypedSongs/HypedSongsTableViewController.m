@@ -1,4 +1,5 @@
 #import "HypedSongsTableViewController.h"
+//#import "HTTPXMLJSONFetchers/JSONFetcher.h"
 NSMutableArray *tracks;
 
 
@@ -26,30 +27,19 @@ NSMutableArray *tracks;
 {
     [super viewDidLoad];
     
-    SBJsonParser *parser = [[SBJsonParser alloc] init];
 
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://pipes.yahoo.com/pipes/pipe.run?_id=580025baaa0941eb1bfddc312d42556b&_render=json&ending=1358683200"]];
     NSData *response = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
-    NSString *json_string = [[NSString alloc] initWithData:response encoding:NSUTF8StringEncoding];
-    NSDictionary *object = [parser objectWithString:json_string error:nil];
     
-    // the JSON response is an Array
-    NSArray *results = [parser objectWithString:json_string error:nil];
-    NSDictionary *dictOne = [results objectAtIndex:0];
-    NSArray *activitiesArray = [dictOne objectForKey:@"activities"];
-    NSDictionary *dictTwo = [activitiesArray objectAtIndex:0];
-    NSDictionary *eventDict = [dictTwo objectForKey:@"event"];
-    
-    NSLog(@"%@ - %@", [eventDict objectForKey:@"category"]);
-    
+    NSLog(@"response :%@",response.description);
 
     tracks = [NSMutableArray new];
     
     Track *track1 = [Track new];
-    [track1 setAd:@"Snatch"];
-    [track1 setArtist:@"Guy Ritchie"];
-    [track1 setAlbum:@"İngiltere"];
-    [track1 setGenre:@"Pubk"];
+    [track1 setName:@"Shine On You Crazy Diamond"];
+    [track1 setArtist:@"Pink Floyd"];
+    [track1 setAlbum:@"PF Live"];
+    [track1 setGenre:@"Progressive Rock"];
     track1.albumCover = [NSURL URLWithString:@"http://ia.media-imdb.com/images/M/MV5BMjAxMzE0MDA4OF5BMl5BanBnXkFtZTYwOTM5Mzk4._V1._SY317_.jpg"];
     [tracks addObject:track1];
     

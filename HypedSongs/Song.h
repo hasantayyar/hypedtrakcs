@@ -11,7 +11,7 @@
 @property(nonatomic, copy) NSString *artist;
 @property(nonatomic, copy) NSString *album;
 @property(nonatomic, copy) NSString *genre;
-@property(nonatomic, copy) NSString *ad;
+@property(nonatomic, copy) NSString *name;
 @property(nonatomic, copy) NSURL *albumCover;
 
 

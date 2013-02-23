@@ -4,7 +4,7 @@
 @synthesize artist;
 @synthesize album;
 @synthesize genre;
-@synthesize ad;
+@synthesize name;
 @synthesize albumCover;
 
 
@@ -22,7 +22,7 @@
 
 
 -(void) debuglog{
-    NSLog(@"Track name  :%@",ad);
+    NSLog(@"Track name  :%@",name);
     NSLog(@"artist  :%@",artist);
     NSLog(@"album      :%@",album);
     NSLog(@"genre :%@",genre);
