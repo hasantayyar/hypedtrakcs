@@ -1,30 +1,26 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.0" toolsVersion="1900" systemVersion="10K549" targetRuntime="iOS.CocoaTouch" nextObjectID="49" propertyAccessControl="none" initialViewController="13">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="13">
     <dependencies>
-        <development defaultVersion="4200" identifier="xcode"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="894"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
+        <!--Hyped Songs Table View Controller - This Week Hyped Tracks-->
         <scene sceneID="12">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="11" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="6" customClass="HypedSongsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="7">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="detailDisclosureButton" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" lineBreakMode="clip" reuseIdentifier="Cell" id="8">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="detailDisclosureButton" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="8">
                                 <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="1" y="0.0" width="285" height="42"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <subviews/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" size="system"/>
                                 <connections>
                                     <segue destination="19" kind="push" id="32"/>
                                 </connections>
@@ -35,14 +31,15 @@
                             <outlet property="delegate" destination="6" id="9"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Film Listesi" id="18"/>
+                    <navigationItem key="navigationItem" title="This Week Hyped Tracks" id="18"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="11" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="105" y="37"/>
         </scene>
+        <!--Navigation Controller-->
         <scene sceneID="16">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="15" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="13" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="14">
@@ -54,22 +51,23 @@
                         <segue destination="6" kind="relationship" relationship="rootViewController" id="17"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="15" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-277" y="37"/>
         </scene>
+        <!--Song Detail View Controller - Track Details-->
         <scene sceneID="22">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="21" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="19" customClass="SongDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="20">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="29">
-                                <rect key="frame" x="118" y="272" width="85" height="37"/>
+                                <rect key="frame" x="106" y="268" width="110" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="Film Afişi">
+                                <state key="normal" title="Artist Picture">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -80,56 +78,56 @@
                                     <segue destination="23" kind="push" id="30"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="ad" lineBreakMode="tailTruncation" minimumFontSize="10" id="33" userLabel="labelFilmAdı">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="trackname" lineBreakMode="tailTruncation" minimumFontSize="10" id="33" userLabel="labelFilmAdı">
                                 <rect key="frame" x="149" y="65" width="135" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="yapimYili" lineBreakMode="tailTruncation" minimumFontSize="10" id="34" userLabel="labelYapimYili">
-                                <rect key="frame" x="149" y="94" width="135" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="yonetmen" lineBreakMode="tailTruncation" minimumFontSize="10" id="35" userLabel="labelYonetmen">
-                                <rect key="frame" x="149" y="123" width="135" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="ulke" lineBreakMode="tailTruncation" minimumFontSize="10" id="36" userLabel="labelUlke">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="genre" lineBreakMode="tailTruncation" minimumFontSize="10" id="34" userLabel="labelGenre">
                                 <rect key="frame" x="149" y="152" width="135" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Film Adı:" textAlignment="right" lineBreakMode="tailTruncation" minimumFontSize="10" id="42">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="artist" lineBreakMode="tailTruncation" minimumFontSize="10" id="35" userLabel="labelArtsit">
+                                <rect key="frame" x="149" y="123" width="135" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="album" lineBreakMode="tailTruncation" minimumFontSize="10" id="36" userLabel="labelAlbum">
+                                <rect key="frame" x="149" y="94" width="135" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Track Name" textAlignment="right" lineBreakMode="tailTruncation" minimumFontSize="10" id="42">
                                 <rect key="frame" x="30" y="65" width="105" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Yapım Yılı:" textAlignment="right" lineBreakMode="tailTruncation" minimumFontSize="10" id="43">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Album Name" textAlignment="right" lineBreakMode="tailTruncation" minimumFontSize="10" id="43">
                                 <rect key="frame" x="30" y="94" width="105" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Yönetmen:" textAlignment="right" lineBreakMode="tailTruncation" minimumFontSize="10" id="44">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Artist" textAlignment="right" lineBreakMode="tailTruncation" minimumFontSize="10" id="44">
                                 <rect key="frame" x="30" y="123" width="105" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Ülke:" textAlignment="right" lineBreakMode="tailTruncation" minimumFontSize="10" id="45">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Genre" textAlignment="right" lineBreakMode="tailTruncation" minimumFontSize="10" id="45">
                                 <rect key="frame" x="30" y="152" width="105" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -139,20 +137,21 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Film Detayı" id="28"/>
+                    <navigationItem key="navigationItem" title="Track Details" id="28"/>
                     <connections>
-                        <outlet property="labelFilmAdi" destination="33" id="38"/>
-                        <outlet property="labelUlke" destination="36" id="41"/>
-                        <outlet property="labelYapimYili" destination="34" id="39"/>
-                        <outlet property="labelYonetmen" destination="35" id="40"/>
+                        <outlet property="labelAlbum" destination="36" id="41"/>
+                        <outlet property="labelArtsit" destination="35" id="40"/>
+                        <outlet property="labelGenre" destination="34" id="39"/>
+                        <outlet property="labelTrackName" destination="33" id="38"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="21" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="513" y="37"/>
         </scene>
+        <!--Artisti Picture View Controller - Artist Picture-->
         <scene sceneID="26">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="25" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="23" customClass="ArtistiPictureViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="24">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
@@ -165,11 +164,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Film Afişi" id="31"/>
+                    <navigationItem key="navigationItem" title="Artist Picture" id="31"/>
                     <connections>
                         <outlet property="imageView" destination="47" id="48"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="25" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="893" y="37"/>
         </scene>
@@ -181,18 +181,17 @@
                 <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
             </relationships>
         </class>
+        <class className="HypedSongsTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/HypedSongsTableViewController.h"/>
+        </class>
         <class className="SongDetailViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SongDetailViewController.h"/>
             <relationships>
-                <relationship kind="outlet" name="labelFilmAdi" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="labelUlke" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="labelYapimYili" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="labelYonetmen" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelAlbum" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelArtsit" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelGenre" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelTrackName" candidateClass="UILabel"/>
             </relationships>
-        </class>
-        <class className="HypedSongsTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/HypedSongsTableViewController.h"/>
-            <relationships/>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

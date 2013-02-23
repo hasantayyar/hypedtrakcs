@@ -5,16 +5,16 @@
 #import "ArtistPictureViewController.h"
 
 @interface SongDetailViewController : UIViewController{
-    Film * seciliFilm;   
-    UILabel *labelFilmAdi;
-    UILabel *labelYapimYili;
-    UILabel *labelYonetmen;
-    UILabel *labelUlke;
+    Track * selectedTrack;
+    UILabel *labelTrackName;
+    UILabel *labelGenre;
+    UILabel *labelArtsit;
+    UILabel *labelAlbum;
 }
-@property (strong, nonatomic) IBOutlet UILabel *labelFilmAdi;
-@property (strong, nonatomic) IBOutlet UILabel *labelYapimYili;
-@property (strong, nonatomic) IBOutlet UILabel *labelYonetmen;
-@property (strong, nonatomic) IBOutlet UILabel *labelUlke;
+@property (strong, nonatomic) IBOutlet UILabel *labelTrackName;
+@property (strong, nonatomic) IBOutlet UILabel *labelGenre;
+@property (strong, nonatomic) IBOutlet UILabel *labelArtsit;
+@property (strong, nonatomic) IBOutlet UILabel *labelAlbum;
 
-@property(nonatomic,strong) Film* seciliFilm;
+@property(nonatomic,strong) Track* selectedTrack;
 @end

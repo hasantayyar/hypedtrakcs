@@ -1,11 +1,11 @@
 #import "Song.h"
-@implementation Film
+@implementation Track
 
-@synthesize yonetmen;
-@synthesize ulke;
-@synthesize yapimYili;
+@synthesize artist;
+@synthesize album;
+@synthesize genre;
 @synthesize ad;
-@synthesize afisURL;
+@synthesize albumCover;
 
 
 - (id)init
@@ -13,19 +13,19 @@
     self = [super init];
     if (self) {
         ad = @"-";
-        yonetmen = @"-";
-        ulke = @"-";
-        yapimYili = 1900;
+        artist = @"-";
+        album = @"-";
+        genre = @"-";
     }
     return self;
 }
 
 
--(void) yazdir{
-    NSLog(@"Film Adi  :%@",ad);
-    NSLog(@"Yonetmen  :%@",yonetmen);
-    NSLog(@"Ülke      :%@",ulke);
-    NSLog(@"Yapim Yili:%i",yapimYili);
+-(void) debuglog{
+    NSLog(@"Track name  :%@",ad);
+    NSLog(@"artist  :%@",artist);
+    NSLog(@"album      :%@",album);
+    NSLog(@"genre :%@",genre);
 }
 
 -(void)dealloc{

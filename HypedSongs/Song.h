@@ -1,21 +1,21 @@
 #import <Foundation/Foundation.h>
 
-@interface Film : NSObject{
+@interface Track : NSObject{
     NSString * ad;
-    NSString * yonetmen;
-    NSString * ulke;
-    NSURL *afisURL;
-    int yapimYili;
+    NSString * artist;
+    NSString * album;
+    NSURL *albumCover;
+    NSString * genre;
 }
 
-@property(nonatomic, copy) NSString *yonetmen;
-@property(nonatomic, copy) NSString *ulke;
-@property(nonatomic, assign) int yapimYili;
-@property(nonatomic, copy) NSString* ad;
-@property(nonatomic, copy) NSURL *afisURL;
+@property(nonatomic, copy) NSString *artist;
+@property(nonatomic, copy) NSString *album;
+@property(nonatomic, copy) NSString *genre;
+@property(nonatomic, copy) NSString *ad;
+@property(nonatomic, copy) NSURL *albumCover;
 
 
 
 
--(void) yazdir;
+-(void) debuglog;
 @end

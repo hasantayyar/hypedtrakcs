@@ -2,9 +2,9 @@
 #import "Song.h"
 
 @interface ArtistiPictureViewController : UIViewController{
-        Film* seciliFilm; 
+        Track* selectedTrack;
     UIImageView *imageView;
 }
 @property (strong, nonatomic) IBOutlet UIImageView *imageView;
-@property(nonatomic,strong) Film* seciliFilm;
+@property(nonatomic,strong) Track* selectedTrack;
 @end

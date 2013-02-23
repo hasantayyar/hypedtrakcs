@@ -1,5 +1,5 @@
 #import "HypedSongsTableViewController.h"
-NSMutableArray *filmler;
+NSMutableArray *tracks;
 
 
 @implementation HypedSongsTableViewController
@@ -25,42 +25,33 @@ NSMutableArray *filmler;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    SBJsonParser *parser = [[SBJsonParser alloc] init];
 
-    filmler = [NSMutableArray new];
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://pipes.yahoo.com/pipes/pipe.run?_id=580025baaa0941eb1bfddc312d42556b&_render=json&ending=1358683200"]];
+    NSData *response = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
+    NSString *json_string = [[NSString alloc] initWithData:response encoding:NSUTF8StringEncoding];
+    NSDictionary *object = [parser objectWithString:json_string error:nil];
     
-    Film *film1 = [Film new];
-    [film1 setAd:@"Snatch"];
-    [film1 setYonetmen:@"Guy Ritchie"];
-    [film1 setUlke:@"İngiltere"];
-    [film1 setYapimYili:2000];
-    film1.afisURL = [NSURL URLWithString:@"http://ia.media-imdb.com/images/M/MV5BMjAxMzE0MDA4OF5BMl5BanBnXkFtZTYwOTM5Mzk4._V1._SY317_.jpg"];
-    [filmler addObject:film1];
+    // the JSON response is an Array
+    NSArray *results = [parser objectWithString:json_string error:nil];
+    NSDictionary *dictOne = [results objectAtIndex:0];
+    NSArray *activitiesArray = [dictOne objectForKey:@"activities"];
+    NSDictionary *dictTwo = [activitiesArray objectAtIndex:0];
+    NSDictionary *eventDict = [dictTwo objectForKey:@"event"];
     
-    film1 = [Film new];
-    [film1 setAd:@"Collateral"];
-    [film1 setYonetmen:@"Michael Mann"];
-    [film1 setUlke:@"A.B.D."];
-    [film1 setYapimYili:2004];
-     film1.afisURL = [NSURL URLWithString:@"http://ia.media-imdb.com/images/M/MV5BMjE3NjM5OTMxMV5BMl5BanBnXkFtZTcwOTIzMTQyMw@@._V1._SY317_.jpg"];
-    [filmler addObject:film1];
+    NSLog(@"%@ - %@", [eventDict objectForKey:@"category"]);
     
-    film1 = [Film new];
-    [film1 setAd:@"Contact"];
-    [film1 setYonetmen:@"Robert Zemeckis"];
-    [film1 setUlke:@"A.B.D."];
-    [film1 setYapimYili:1997];
-    film1.afisURL = [NSURL URLWithString:@"http://ia.media-imdb.com/images/M/MV5BMTkxODM2MjI0NF5BMl5BanBnXkFtZTcwMjU3NDEzMQ@@._V1._SY317_CR8,0,214,317_.jpg"];
-    [filmler addObject:film1];
+
+    tracks = [NSMutableArray new];
     
-    
-    film1 = [Film new];
-    [film1 setAd:@"Seven"];
-    [film1 setYonetmen:@"David Fincher"];
-    [film1 setUlke:@"A.B.D."];
-    [film1 setYapimYili:1995];
-    film1.afisURL = [NSURL URLWithString:@"http://ia.media-imdb.com/images/M/MV5BMTQwNTU3MTE4NF5BMl5BanBnXkFtZTcwOTgxNDM2Mg@@._V1._SY317_.jpg"];
-    [filmler addObject:film1];
-    
+    Track *track1 = [Track new];
+    [track1 setAd:@"Snatch"];
+    [track1 setArtist:@"Guy Ritchie"];
+    [track1 setAlbum:@"İngiltere"];
+    [track1 setGenre:@"Pubk"];
+    track1.albumCover = [NSURL URLWithString:@"http://ia.media-imdb.com/images/M/MV5BMjAxMzE0MDA4OF5BMl5BanBnXkFtZTYwOTM5Mzk4._V1._SY317_.jpg"];
+    [tracks addObject:track1];
     
 }
 
@@ -106,17 +97,17 @@ NSMutableArray *filmler;
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [filmler count];
+    return [tracks count];
 }
 
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     
-    SongDetailViewController *filmDetayController = [segue destinationViewController];
+    SongDetailViewController *trackDetailController = [segue destinationViewController];
     NSIndexPath *path = [self.tableView indexPathForSelectedRow];
     int seciliSatir = [path row];
-    Film* film = [filmler objectAtIndex:seciliSatir];
+    Track* track = [tracks objectAtIndex:seciliSatir];
     
-    filmDetayController.seciliFilm = film;
+    trackDetailController.selectedTrack = track;
 
 }
 
@@ -129,8 +120,8 @@ NSMutableArray *filmler;
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
-    Film * film = [filmler objectAtIndex:indexPath.row];
-    cell.textLabel.text = [film ad];
+    Track * track = [tracks objectAtIndex:indexPath.row];
+    cell.textLabel.text = [track ad];
     
     return cell;
 }

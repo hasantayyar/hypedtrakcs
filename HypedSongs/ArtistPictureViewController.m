@@ -3,7 +3,7 @@
 
 @implementation ArtistiPictureViewController
 @synthesize imageView;
-@synthesize seciliFilm;
+@synthesize selectedTrack;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -37,7 +37,7 @@
 {
     [super viewDidLoad];
     
-    UIImage *myImage = [[UIImage alloc] initWithData:[NSData dataWithContentsOfURL:seciliFilm.afisURL]];
+    UIImage *myImage = [[UIImage alloc] initWithData:[NSData dataWithContentsOfURL:selectedTrack.albumCover]];
     imageView.image = myImage;
 }
 

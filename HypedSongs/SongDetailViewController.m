@@ -2,11 +2,11 @@
 #import "SongDetailViewController.h"
 
 @implementation SongDetailViewController
-@synthesize labelYapimYili;
-@synthesize labelYonetmen;
-@synthesize labelUlke;
-@synthesize seciliFilm;
-@synthesize labelFilmAdi;
+@synthesize labelGenre;
+@synthesize labelArtsit;
+@synthesize labelAlbum;
+@synthesize selectedTrack;
+@synthesize labelTrackName;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -29,17 +29,17 @@
 {
     
     [super viewDidLoad];
-    labelFilmAdi.text = [seciliFilm ad];
-    labelUlke.text = [seciliFilm ulke];
-    labelYonetmen.text= [seciliFilm yonetmen];
-    labelYapimYili.text = [NSString stringWithFormat:@"%d", [seciliFilm yapimYili]];
+    labelTrackName.text = [selectedTrack ad];
+    labelAlbum.text = [selectedTrack album];
+    labelArtsit.text= [selectedTrack artist];
+    labelGenre.text = [selectedTrack genre];
 }
  
 
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     
     ArtistiPictureViewController *ArtistiPictureViewController = [segue destinationViewController];
-    ArtistiPictureViewController.seciliFilm = seciliFilm;
+    ArtistiPictureViewController.selectedTrack = selectedTrack;
 }
 
 
@@ -47,10 +47,10 @@
 {
    
  
-    [self setLabelFilmAdi:nil];
-    [self setLabelYapimYili:nil];
-    [self setLabelYonetmen:nil];
-    [self setLabelUlke:nil];
+    //[self setlabelTrackName:nil];
+    //[self setlabelGenre:nil];
+    //[self setlabelArtsit:nil];
+    //[self setlabelAlbum:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
